@@ -11,9 +11,9 @@ class SpicesController < ApplicationController
     end
 
     def update
-        spice = Spice.find_by(id: params[:id])
+        spice = Spice.find(params[:id])
         spice.update(spice_params)
-        render json: Spice
+        render json: spice
     end
 
     def destroy 
